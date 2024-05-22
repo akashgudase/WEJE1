@@ -1,0 +1,26 @@
+package com.jspiders.springmvc.dto;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity
+@Table(name = "contact_info")
+@Data
+public class ContactDTO {
+
+	@Id
+	private int id;
+	@Column(nullable = false, unique = false)
+	private String firstName;
+	@Column(nullable = false, unique = false)
+	private String lastName;
+	@Column(nullable = false, unique = false)
+	private String email;
+	@Column(nullable = false, unique = false)
+	private long mobile;
+
+}

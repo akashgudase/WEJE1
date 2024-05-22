@@ -1,0 +1,10 @@
+package com.jspiders.springmvc.dto;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "contact_info")
+public class ContactDTO {
+
+}

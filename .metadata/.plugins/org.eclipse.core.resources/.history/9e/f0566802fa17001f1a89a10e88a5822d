@@ -1,0 +1,21 @@
+package com.jspiders.springmvc.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.jspiders.springmvc.service.ContactService;
+
+@Controller
+public class ContactController {
+
+	@Autowired
+	private ContactService contactService;
+
+	@RequestMapping(path = "/home_page", method = RequestMethod.GET)
+	public String getHomePage() {
+		return "home_page";
+	}
+
+}
